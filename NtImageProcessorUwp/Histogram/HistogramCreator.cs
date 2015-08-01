@@ -9,7 +9,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 
 #endif
 
-namespace Naotaco.Naotaco.ImageProcessor
+namespace Naotaco.ImageProcessor.Histogram
 {
     public class HistogramCreator
     {
