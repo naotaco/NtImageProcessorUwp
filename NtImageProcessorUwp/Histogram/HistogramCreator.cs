@@ -121,7 +121,7 @@ namespace Naotaco.ImageProcessor.Histogram
 
         }
 
-#if WINDOWS_APP
+#if (WINDOWS_APP || WINDOWS_UWP)
         /// <summary>
         /// Start to create histogram. Once it's completed, OnHistogramCreated will be called.
         /// Recommend to run this method on background task with lower priority.
@@ -139,7 +139,7 @@ namespace Naotaco.ImageProcessor.Histogram
         }
 #endif
 
-#if WINDOWS_APP
+#if (WINDOWS_APP || WINDOWS_UWP)
         /// <summary>
         /// Calculate histogram from WritableBitmap.Pixelbuffer.
         /// </summary>

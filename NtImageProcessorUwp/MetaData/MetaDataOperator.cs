@@ -42,7 +42,7 @@ namespace Naotaco.ImageProcessor.MetaData
         /// <returns>Jpeg data with geometory information.</returns>
         public static byte[] AddGeoposition(byte[] image, Geoposition position, bool overwrite = false)
         {
-#if WINDOWS_APP
+#if (WINDOWS_APP || WINDOWS_UWP)
             Debug.WriteLine("Longitude : " + position.Coordinate.Point.Position.Longitude + " Latitude: " + position.Coordinate.Point.Position.Latitude);
 #elif WINDOWS_PHONE
             Debug.WriteLine("Longitude : " + position.Coordinate.Longitude + " Latitude: " + position.Coordinate.Latitude);
@@ -97,7 +97,7 @@ namespace Naotaco.ImageProcessor.MetaData
         /// <returns>Jpeg data with geometory information.</returns>
         public static Stream AddGeoposition(Stream image, Geoposition position, bool overwrite = false)
         {
-#if WINDOWS_APP
+#if (WINDOWS_APP || WINDOWS_UWP)
             Debug.WriteLine("Longitude : " + position.Coordinate.Point.Position.Longitude + " Latitude: " + position.Coordinate.Point.Position.Latitude);
 #elif WINDOWS_PHONE
             Debug.WriteLine("Longitude : " + position.Coordinate.Longitude + " Latitude: " + position.Coordinate.Latitude);

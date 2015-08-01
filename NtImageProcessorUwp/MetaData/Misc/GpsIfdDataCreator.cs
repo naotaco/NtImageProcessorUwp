@@ -33,7 +33,7 @@ namespace Naotaco.ImageProcessor.MetaData.Misc
             };
             char latRef;
             double latitude = 0;
-#if WINDOWS_APP
+#if (WINDOWS_APP || WINDOWS_UWP)
             latitude = position.Coordinate.Point.Position.Latitude;
 #elif WINDOWS_PHONE
             latitude = position.Coordinate.Latitude;
@@ -80,7 +80,7 @@ namespace Naotaco.ImageProcessor.MetaData.Misc
             };
             char lonRef;
             double longitude = 0;
-#if WINDOWS_APP
+#if (WINDOWS_APP || WINDOWS_UWP)
             longitude = position.Coordinate.Point.Position.Longitude;
 #elif WINDOWS_PHONE
             longitude = position.Coordinate.Longitude;
