@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using System.Threading;
+using Windows.UI.Xaml;
 #if WINDOWS_PHONE
 using System.Windows.Media.Imaging;
-#elif WINDOWS_PHONE_APP||WINDOWS_APP||NETFX_CORE
+#elif WINDOWS_PHONE_APP || WINDOWS_APP || NETFX_CORE
 using Windows.UI.Xaml.Media.Imaging;
 using System.Runtime.InteropServices.WindowsRuntime;
 
@@ -83,8 +85,26 @@ namespace Naotaco.ImageProcessor.Histogram
             }
 
             _init();
+
+            FpsTimer.Interval = TimeSpan.FromMilliseconds(FPS_INTERVAL);
+            FpsTimer.Tick += (sender, arg) =>
+            {
+                var fps = (double)FrameCount * 1000 / (double)FPS_INTERVAL;
+                FrameCount = 0;
+                Debug.WriteLine(string.Format("[Histogram] {0} fps", fps));
+            };
+
             IsRunning = false;
         }
+
+        public void Stop()
+        {
+            FpsTimer.Stop();
+        }
+
+        private const int FPS_INTERVAL = 5000;
+        int FrameCount = 0;
+        DispatcherTimer FpsTimer = new DispatcherTimer();
 
         private void _init()
         {
@@ -99,28 +119,7 @@ namespace Naotaco.ImageProcessor.Histogram
                 blue[i] = 0;
             }
         }
-
-        /// <summary>
-        /// Start to create histogram. Once it's completed, OnHistogramCreated will be called.
-        /// </summary>
-        /// <param name="source">Source image</param>
-        /// <returns></returns>
-        public async Task CreateHistogramAsync(WriteableBitmap source)
-        {
-            if (IsRunning)
-            {
-                Debug.WriteLine("it's ruuning. skip.");
-                return;
-            }
-
-            _init();
-
-            IsRunning = true;
-
-            await Task.Factory.StartNew(() => { CalculateHistogram(source); });
-
-        }
-
+        
 #if (WINDOWS_APP || WINDOWS_UWP)
         /// <summary>
         /// Start to create histogram. Once it's completed, OnHistogramCreated will be called.
@@ -134,8 +133,23 @@ namespace Naotaco.ImageProcessor.Histogram
             {
                 return;
             }
+
+            IsRunning = true;
+
+            if (!FpsTimer.IsEnabled)
+            {
+                FpsTimer.Start();
+            }
+
             _init();
+
+            FrameCount++;
+
+#if (WINDOWS_APP || WINDOWS_UWP)
             CalculateHistogramFromPixelBuffer(source);
+#elif (WINDOWS_PHONE)
+                CalculateHistogram(source);
+#endif
         }
 #endif
 
