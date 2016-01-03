@@ -32,14 +32,27 @@ var newImage = JpegMetaDataProcessor.SetMetaData(image, metadata);
 
 ### Add Geoposition to metadata
 
-It has a method to add GPS IFD from Geoposition(Windows.Devices.Geolocation.Geoposition).
+It has a simple method to add geotag from Geoposition
+
+```cs
+    Stream originalImage = getFromSomewhere();
+    GeoPosition position = getFromSomeAPI();
+
+    // Not to overwrite geotag. If already exists, an exception will be thrown
+    Stream newImage = await MetaDataOperator.AddGeopositionAsync(originalImage, position);
+
+    // to overwrite geotag
+    Stream newImage = await MetaDataOperator.AddGeopositionAsync(originalImage, position, true);
+```
+
+Also you can add/update geotag manually same as other metadata sections.
 
 ```cs
 // parse given image first
 var exif = JpegMetaDataParser.ParseImage(image);
 
 // check whether the image already contains GPS section or not
-if (exif.PrimaryIfd.Entries.ContainsKey(Definitions.GPS_IFD_POINTER_TAG))
+if (exif.IsGeotagExist)
 {
 	// You can throw excpetion
 	throw new GpsInformationAlreadyExistsException("This image contains GPS information.");
