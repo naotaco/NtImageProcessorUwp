@@ -1,12 +1,13 @@
 NtImageLib
 ==========
 
-Provides functions to analyze / operate JPEG file in C#.
+Provides functions to parse/edit JPEG metadata (like Exif) in C#
 
 - No dependencies
 - Works on UWP (Projects for Windows10)
 * For WindowsPhone 8/8.1, See [NtImageLib](https://github.com/naotaco/NtImageLib)
 - VisualStudio 2015 Community is required to run included tests.
+- Supports geotagging to JPEG files
 
 ## JPEG metadata (Exif and other) operator
 
@@ -55,31 +56,5 @@ exif.GpsIfd = gpsIfdData;
 var newImage = JpegMetaDataProcessor.SetMetaData(image, exif);
 ```
 
-## JPEG image analyzer
 
-A class, HistogramCreator supports to show level of each colors.
-
-```cs
-
-private void SomethingInitialize()
-{
-	// Initialize instance with resolution setting
-	histogramCreator = new HistogramCreator(HistogramCreator.HistogramResolution.Resolution_128);
-	histogramCreator.OnHistogramCreated += histogramCreator_OnHistogramCreated;
-}
-
-public void ImageUpdated()
-{
-	// input image
-	await histogramCreator.CreateHistogram(ImageSource);
-}
-
-void histogramCreator_OnHistogramCreated(int[] Count_R, int[] Count_G, int[] Count_B)
-{
-	// Do something with values.
-	// Length of these arrays will be same, and it will be the resolution, 64, 128 or 256.
-	// Pixel count of each levels are stored.
-}
-
-```
 

@@ -113,7 +113,6 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Histogram\HistogramCreator.cs" />
     <Compile Include="MetaData\Composer\IfdComposer.cs" />
     <Compile Include="MetaData\Composer\JpegMetaDataProcessor.cs" />
     <Compile Include="MetaData\MetaDataOperator.cs" />
