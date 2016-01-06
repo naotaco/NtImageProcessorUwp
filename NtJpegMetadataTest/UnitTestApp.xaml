@@ -1,8 +1,8 @@
 ﻿<Application
-    x:Class="Naotaco.ImageProcessorTest.App"
+    x:Class="Naotaco.JpegMetadataTest.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Naotaco.ImageProcessorTest"
+    xmlns:local="using:Naotaco.JpegMetadataTest"
     RequestedTheme="Light">
 
 </Application>

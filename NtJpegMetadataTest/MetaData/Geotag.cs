@@ -1,14 +1,14 @@
 ﻿#define WINDOWS_APP
 
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
-using Naotaco.ImageProcessor.MetaData;
-using Naotaco.ImageProcessor.MetaData.Misc;
+using Naotaco.Jpeg.MetaData;
+using Naotaco.Jpeg.MetaData.Misc;
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Windows.Devices.Geolocation;
 
-namespace Naotaco.ImageProcessorTest.MetaData
+namespace Naotaco.JpegMetadataTest.MetaData
 {
     [TestClass]
     public class Geotag

@@ -1,9 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
-using Naotaco.ImageProcessor.MetaData.Misc;
-using Naotaco.ImageProcessor.MetaData.Structure;
 
-namespace Naotaco.ImageProcessorTest
+namespace Naotaco.JpegMetadataTest
 {
     [TestClass]
     public class UnitTest1

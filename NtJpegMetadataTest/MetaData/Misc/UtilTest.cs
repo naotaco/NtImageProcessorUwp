@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Naotaco.ImageProcessor.MetaData.Misc;
 using Naotaco.ImageProcessor.MetaData.Structure;
 
-namespace Naotaco.ImageProcessorTest.MetaData.Misc
+namespace Naotaco.JpegMetadataTest.MetaData.Misc
 {
     [TestClass]
     public class UtilTest

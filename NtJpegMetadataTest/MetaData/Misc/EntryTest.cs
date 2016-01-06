@@ -8,7 +8,7 @@ using Naotaco.ImageProcessor.MetaData.Structure;
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using System.Diagnostics;
 
-namespace Naotaco.ImageProcessorTest.MetaData.Misc
+namespace Naotaco.JpegMetadataTest.MetaData.Misc
 {
     [TestClass]
     public class EntryTest
