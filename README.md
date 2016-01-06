@@ -1,7 +1,7 @@
-NtImageLib
+NT JPEG metadata editor
 ==========
 
-Provides functions to parse/edit JPEG metadata (like Exif) in C#
+Provides functions to parse/edit JPEG metadata (Exif) in C#
 
 - No dependencies
 - Works on UWP (Projects for Windows10)
