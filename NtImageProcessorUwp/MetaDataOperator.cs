@@ -1,16 +1,12 @@
-﻿using Naotaco.ImageProcessor.MetaData.Composer;
-using Naotaco.ImageProcessor.MetaData.Misc;
-using Naotaco.ImageProcessor.MetaData.Structure;
-using System;
-using System.Collections.Generic;
+﻿using Naotaco.Jpeg.MetaData.Composer;
+using Naotaco.Jpeg.MetaData.Misc;
+using Naotaco.Jpeg.MetaData.Structure;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Windows.Devices.Geolocation;
 
-namespace Naotaco.ImageProcessor.MetaData
+namespace Naotaco.Jpeg.MetaData
 {
     public static class MetaDataOperator
     {

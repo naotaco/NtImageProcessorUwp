@@ -1,5 +1,5 @@
-﻿using Naotaco.ImageProcessor.MetaData.Misc;
-using Naotaco.ImageProcessor.MetaData.Structure;
+﻿using Naotaco.Jpeg.MetaData.Misc;
+using Naotaco.Jpeg.MetaData.Structure;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Naotaco.ImageProcessor.MetaData.Parser
+namespace Naotaco.Jpeg.MetaData.Parser
 {
     public static class IfdParser
     {

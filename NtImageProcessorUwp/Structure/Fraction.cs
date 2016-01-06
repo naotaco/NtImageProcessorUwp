@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Naotaco.ImageProcessor.MetaData.Structure
+namespace Naotaco.Jpeg.MetaData.Structure
 {
     public class UnsignedFraction
     {

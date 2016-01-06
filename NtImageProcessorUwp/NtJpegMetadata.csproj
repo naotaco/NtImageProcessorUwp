@@ -113,19 +113,19 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MetaData\Composer\IfdComposer.cs" />
-    <Compile Include="MetaData\Composer\JpegMetaDataProcessor.cs" />
-    <Compile Include="MetaData\MetaDataOperator.cs" />
-    <Compile Include="MetaData\Misc\Exceptions.cs" />
-    <Compile Include="MetaData\Misc\GpsIfdDataCreator.cs" />
-    <Compile Include="MetaData\Misc\Util.cs" />
-    <Compile Include="MetaData\Parser\IfdParser.cs" />
-    <Compile Include="MetaData\Parser\JpegMetaDataParser.cs" />
-    <Compile Include="MetaData\Structure\Definitions.cs" />
-    <Compile Include="MetaData\Structure\Entry.cs" />
-    <Compile Include="MetaData\Structure\Fraction.cs" />
-    <Compile Include="MetaData\Structure\IfdData.cs" />
-    <Compile Include="MetaData\Structure\JpegMetaData.cs" />
+    <Compile Include="Composer\IfdComposer.cs" />
+    <Compile Include="Composer\JpegMetaDataProcessor.cs" />
+    <Compile Include="MetaDataOperator.cs" />
+    <Compile Include="Misc\Exceptions.cs" />
+    <Compile Include="Misc\GpsIfdDataCreator.cs" />
+    <Compile Include="Misc\Util.cs" />
+    <Compile Include="Parser\IfdParser.cs" />
+    <Compile Include="Parser\JpegMetaDataParser.cs" />
+    <Compile Include="Structure\Definitions.cs" />
+    <Compile Include="Structure\Entry.cs" />
+    <Compile Include="Structure\Fraction.cs" />
+    <Compile Include="Structure\IfdData.cs" />
+    <Compile Include="Structure\JpegMetaData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Properties\NtImageProcessorUwp.rd.xml" />
   </ItemGroup>

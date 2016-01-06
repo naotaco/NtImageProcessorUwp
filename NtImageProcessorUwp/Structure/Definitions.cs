@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Naotaco.ImageProcessor.MetaData.Misc
+namespace Naotaco.Jpeg.MetaData.Misc
 {
     public static class Definitions
     {

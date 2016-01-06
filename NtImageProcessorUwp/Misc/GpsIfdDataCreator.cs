@@ -1,4 +1,4 @@
-﻿using Naotaco.ImageProcessor.MetaData.Structure;
+﻿using Naotaco.Jpeg.MetaData.Structure;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Devices.Geolocation;
 
-namespace Naotaco.ImageProcessor.MetaData.Misc
+namespace Naotaco.Jpeg.MetaData.Misc
 {
     public static class GpsIfdDataCreator
     {

@@ -1,13 +1,9 @@
-﻿using Naotaco.ImageProcessor.MetaData.Structure;
+﻿using Naotaco.Jpeg.MetaData.Misc;
+using Naotaco.Jpeg.MetaData.Structure;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Naotaco.ImageProcessor.MetaData.Misc;
-using System.Diagnostics;
 
-namespace Naotaco.ImageProcessor.MetaData.Composer
+namespace Naotaco.Jpeg.MetaData.Composer
 {
     public static class IfdComposer
     {

@@ -1,11 +1,11 @@
-﻿using Naotaco.ImageProcessor.MetaData.Misc;
+﻿using Naotaco.Jpeg.MetaData.Misc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Naotaco.ImageProcessor.MetaData.Structure
+namespace Naotaco.Jpeg.MetaData.Structure
 {
     public class JpegMetaData
     {
